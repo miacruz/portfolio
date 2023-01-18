@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@700&family=Nobile&display=swap');
+
+/* HTML tags and (mainly) index page */
+h1{
+    font-family: 'Corben', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: #71282C;
+}
+
+h2{
+    font-size: 24px;
+    color: #CDA6AA;
+}
+
+nav{
+    font-family: 'Corben', cursive;
+    font-size: 28px;
+    word-spacing: 20px;
+}
+
+p{
+    font-size: 16px;
+    color: #2F1113;
+}
+
+h2, p{
+    font-family: 'Nobile', sans-serif;
+    line-height: 35px;
+}
+
+section{
+    margin: 80px 0 80px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+    grid-auto-flow: dense;
+}
+
+.byline{
+    grid-column: 3 / span 8;
+    text-align: center;
+}
+
+.artwork{
+    grid-column: 2 / span 5;
+    text-align: center;
+}
+
+.description{
+    grid-column: 7 / span 5;
+}
+
+.artwork-alt{
+    grid-column: 7 / span 5;
+    text-align: center;
+}
+
+.description-alt{
+    grid-column: 2 / span 5;
+}
+
+.photo{
+    grid-column: 3 / span 4;
+}
+
+.bio{
+    grid-column: 7 / span 4;
+}
+
+img{
+    max-height: 640px;
+    max-width: 100%;
+
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3%;
+}
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#logo{
+  max-width: 100%;
+  max-height: 150px;
+}
+
+a:hover, a.selected{
+  text-decoration: underline;
+  color: #BCD3D1;
+}
+
+nav a{
+  color: #79A6A3;
+  text-decoration: none;
+}
+#h2byline {
+  color: #2F1113;
+}
+
+footer p{
+  color: #C7D7CA;
+}
+
+/* About and Contact page */
+form, button{
+    font-family: 'Nobile', sans-serif;
+    font-size: 16px;
+    grid-column: 2 / span 10;
+    border: 0;
+}
+
+input[type=text], input[type=email], textarea, button{
+    padding: 12px 15px;
+    margin: 8px 10px;
+    box-sizing: border-box;
+    border: 0;
+  }
+
+button, button a{
+    background-color: #FBF6F2;
+    color: #2F1113;
+    padding: 12px 15px;
+    margin: 8px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, button a:hover{
+    color: #D0C9C5;
+    text-decoration: underline;
+}
+
+label{
+    color: #2F1113;
+    margin: 10px 20px 10px 20px;
+}
+
+input, textarea{
+    width: 100%;
+    background-color: #FBF6F2;
+    font-family: 'Nobile', sans-serif;
+    font-size: 16px;
+    
+}
+
+textarea {
+  resize: none;
+}
+
+/* Slideshow ~ css originated from: https://codepen.io/chriscoyier/pen/XwbNwX*/
+
+.slider{
+  max-height: 640px;
+  max-width: 100%;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.slides{
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.slides > div{
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  max-height: 640px;
+  max-width: 100%;
+  border-radius: 10px;
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider > img{
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider > a{
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 10px;
+  position: relative;
+  font-family: 'Nobile', sans-serif;
+  line-height: 35px;
+  font-size: 16px;
+  color: #2F1113;
+}
+
+.slider > a:hover{
+  text-decoration: underline;
+  color: #BCD3D1;
+}
+
+.slider > a:active{
+  top: 1px;
+}
+
+.slider > a:focus{
+  background-color: #FBF6F2;
+}
+
+@supports (scroll-snap-type){
+  .slider > a {
+    display: none;
+  }
+}
